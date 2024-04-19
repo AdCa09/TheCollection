@@ -19,7 +19,7 @@ Une image représentant visuellement l'arme.
 ### Test : 
 Un lien vers une vidéo de test de l'arme.
 ## Utilisation du Site
-Cliquez sur chaque carte pour afficher les détails de l'arme correspondante, y compris sa description et le lien vers la vidéo de test.
+Cliquez sur chaque logo Youtube, ce qui vous redirigera vers la vidéo de test.
 
 ### Contact
 Si vous avez des questions ou des commentaires sur le site, n'hésitez pas à nous contacter à l'adresse email@example.com.
