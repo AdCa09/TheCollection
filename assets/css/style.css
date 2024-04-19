@@ -1,38 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
 header p {
   padding-bottom: 60px;
 }
 
 body {
-  background-color: rgb(105, 190, 190);
+  background-color: rgb(52, 59, 96);
 }
 body .card_container {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 body .card_container .article_card {
-  width: 20%;
-  height: 450px;
-  background-color: rgb(116, 109, 109);
-  position: absolute;
+  display: inline-block;
+  width: 30%;
+  margin: 5px;
+  vertical-align: top;
+  box-sizing: border-box;
+  background-color: #787da7;
+  border-radius: 5%;
+  box-shadow: 2px 2px 15px;
+  padding-bottom: 10px;
 }
-body .card_container .article_card img {
+body .card_container .article_card a {
+  font-size: 50px;
+}
+body .card_container .article_card a:hover {
+  color: rgb(127, 3, 3);
+}
+body .card_container .article_card h2 {
+  border-radius: 10px;
+  background-color: rgb(85, 111, 186);
+  max-width: 30%;
+  margin: 5px;
+  margin-left: 5px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+body .card_container .article_card h3 {
+  margin: 5px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+body .card_container .article_card p {
+  font-family: "Lexend", sans-serif;
+  margin: 5px;
+  padding-bottom: 15px;
+  font-size: 15px;
+}
+body .card_container img {
   width: 100%;
   height: 40%;
   justify-content: center;
+  border-radius: 10%;
 }
-body .card_container .article_card span {
-  position: relative;
-  top: 10px;
-  margin: 10px;
-  background-color: rgb(67, 128, 219);
-  border-radius: 20%;
-  font-family: "Lexend", sans-serif;
-}
-body .card_container .article_card a {
+body .card_container a {
   font-size: 30px;
   color: rgb(184, 23, 23);
   padding-left: 10px;
+}
+
+@media screen and (max-width: 715px) {
+  body .card_container {
+    text-wrap: no;
+    flex-direction: column;
+  }
+  body .card_container .article_card {
+    width: 100%;
+  }
+  body .card_container .article_card a {
+    padding: 0px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body .card_container .article_card h2 {
+    max-width: 50%;
+    font-size: 20px;
+  }
+  body .card_container .article_card h3 {
+    font-size: 15px;
+    padding: 5px;
+  }
+  body .card_container .article_card p {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */

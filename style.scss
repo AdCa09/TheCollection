@@ -1,61 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
 @mixin fontLexend {
-       font-family:"Lexend", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 
-header{
-      
-   
+@mixin fontPtSansSerif {
+    font-family: "PT Sans Narrow", sans-serif;
+}
 
-    p{
-        
+header {
+
+
+
+    p {
+
         padding-bottom: 60px
-        
     }
 
-};
+}
 
-body{
-   background-color: rgb(105, 190, 190);
+;
 
-    .card_container{
-        width:100%;
+body {
+    background-color: rgb(52 59 96);
+
+    .card_container {
+        max-width: 100%;
         height: 100%;
         display: flex;
         flex-direction: row;
-        
-        
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-        .article_card{
-            
-            width: 20%;
-            height: 450px;
-            background-color: rgb(116, 109, 109);
-            position: absolute;
-            img{
-                
-                width: 100%;
-                height: 40%;
-                justify-content: center;
+
+        .article_card {
+            display: inline-block;
+            width: 30%;
+            margin: 5px;
+            vertical-align: top;
+            box-sizing: border-box;
+            background-color: #787da7;
+            border-radius: 5%;
+            box-shadow: 2px 2px 15px;
+            padding-bottom: 10px;
+
+            a {
+                font-size: 50px;
+
+                &:hover {
+                    color: rgb(127, 3, 3);
+                }
             }
-            span{
-              position: relative;
-              top: 10px;
-              margin: 10px;
-              background-color: rgb(67, 128, 219);
-              border-radius: 20%;
-              @include fontLexend;
+
+
+            h2 {
+                border-radius: 10px;
+                background-color: rgb(85 111 186);
+                max-width: 30%;
+                margin: 5px;
+                margin-left: 5px;
+                @include fontPtSansSerif;
             }
-            a{
-                font-size: 30px;
-                color: rgb(184, 23, 23);
-                padding-left: 10px;
+
+            h3 {
+                margin: 5px;
+                padding-top: 15px;
+                padding-bottom: 20px;
+                @include fontPtSansSerif;
+
+            }
+
+            p {
+                @include fontLexend;
+                margin: 5px;
+                padding-bottom: 15px;
+                font-size: 15px;
             }
         }
-        
-    }
 
+
+        img {
+
+            width: 100%;
+            height: 40%;
+            justify-content: center;
+            border-radius: 10%;
+        }
+
+
+        a {
+            font-size: 30px;
+            color: rgb(184, 23, 23);
+            padding-left: 10px;
+        }
+    }
 
 }
 
+@media screen and (max-width: 715px) {
+    body {
+
+
+        .card_container {
+            text-wrap: no;
+            flex-direction: column;
+
+            .article_card {
+                width: 100%;
+
+                a {
+                    padding: 0px;
+                    margin-left: 20px;
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width:900px) {
+    body {
+
+        .card_container {
+
+            .article_card {
+
+                h2 {
+                    max-width: 50%;
+                    font-size: 20px;
+                }
+
+                h3 {
+                    font-size: 15px;
+                    padding: 5px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
